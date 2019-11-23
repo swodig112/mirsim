@@ -7,3 +7,7 @@ def hypot(vec):
 
 def incross(vec1, vec2):
     return np.sum(vec1 * vec2)
+
+
+def sizeondir(vec1, vec2):
+    return incross(vec, vec2) / hypot(vec2) ** 2 * vec2
