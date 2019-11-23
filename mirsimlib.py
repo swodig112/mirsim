@@ -30,3 +30,8 @@ def spoint2point(spoint):
     return np.array([np.sin(spoint[0]) * spoint[1],
                      np.cos(spoint[0]) * spoint[1],
                      spoint[2]])
+
+
+def totalroute(point, eye, spoint):
+    spoint = spoint2point(spoint)
+    return hypot(spoint - point) + hypot(spoint - eye)
