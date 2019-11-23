@@ -17,3 +17,10 @@ def reflect(vec, point):
     ver = sizeondir(vec, point) + point
     ref = 2 * ver - (point + vec * -1)
     return ref
+
+
+def shaperesolver(shape):
+    res = []
+    for i in range(len(shape) - 1):
+        res.appen(shape[i] - 1)
+    return tuple(res)
