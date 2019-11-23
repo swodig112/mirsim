@@ -24,3 +24,9 @@ def shaperesolver(shape):
     for i in range(len(shape) - 1):
         res.appen(shape[i] - 1)
     return tuple(res)
+
+
+def spoint2point(spoint):
+    return np.array([np.sin(spoint[0]) * spoint[1],
+                     np.cos(spoint[0]) * spoint[1],
+                     spoint[2]])
