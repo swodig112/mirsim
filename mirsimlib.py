@@ -22,7 +22,7 @@ def reflect(vec, point):
 def shaperesolver(shape):
     res = []
     for i in range(len(shape) - 1):
-        res.appen(shape[i] - 1)
+        res.append(shape[i] - 1)
     return tuple(res)
 
 
