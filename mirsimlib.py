@@ -26,12 +26,12 @@ def shaperesolver(shape):
     return tuple(res)
 
 
-def spoint2point(spoint):
-    return np.array([np.sin(spoint[0]) * spoint[1],
-                     np.cos(spoint[0]) * spoint[1],
-                     spoint[2]])
+def cypoint2point(cypoint):
+    return np.array([np.sin(cypoint[0]) * cypoint[1],
+                     np.cos(cypoint[0]) * cypoint[1],
+                     cypoint[2]])
 
 
-def totalroute(point, eye, spoint):
-    spoint = spoint2point(spoint)
-    return hypot(spoint - point) + hypot(spoint - eye)
+def totalroute(point, eye, cypoint):
+    cypoint = spoint2point(cypoint)
+    return hypot(cypoint - point) + hypot(cypoint - eye)
