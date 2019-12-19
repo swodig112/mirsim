@@ -35,3 +35,12 @@ def cypoint2point(cypoint):
 def totalroute(point, eye, cypoint):
     cypoint = spoint2point(cypoint)
     return hypot(cypoint - point) + hypot(cypoint - eye)
+
+
+def binarysearch2d(cypoints, eye, point):
+    d = [0] * 4
+    for i in range(10):
+        d = totalroute(point, eye, cypoints)
+        d = np.argmin(d)
+        cypoints[:, :] = (cypoints[:, :] + cypoints[:, d]) / 2
+    return np.sum(cypoints, axis=1) / cypoints.shape[1]
