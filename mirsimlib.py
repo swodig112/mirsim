@@ -13,7 +13,7 @@ def sizeondir(vec1, vec2):
     return incross(vec, vec2) / hypot(vec2) ** 2 * vec2
 
 
-def reflect(vec, point):
+def reflectvec(vec, point):
     ver = sizeondir(vec, point) + point
     ref = 2 * ver - (point + vec * -1)
     return ref
